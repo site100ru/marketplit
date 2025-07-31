@@ -17,9 +17,9 @@ jobs:
           script: |
             
             # Для первой инсталяции
-            cd /var/www/marketplit.ru/wp-content/themes/site100marketplit
+            cd /var/www/u1538455/data/www/marketplit.ru/wp-content/themes/site100marketplit
             git clone https://github.com/site100ru/marketplit.git .
 
             # Для последующих инсталяций
-            # cd /var/www/u1538455/data/www/мозаика62.рф/wp-content/themes/new
+            # cd /var/www/u1538455/data/www/marketplit.ru/wp-content/themes/site100marketplit
             # git pull
