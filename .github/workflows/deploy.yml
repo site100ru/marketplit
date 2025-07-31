@@ -1,0 +1,25 @@
+name: Deploy marketplit.ru
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Connect to server
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.REGRU_HOST }}
+          username: ${{ secrets.REGRU_USER }}
+          key: ${{ secrets.REGRU_KEY }}
+          script: |
+            
+            # Для первой инсталяции
+            cd /var/www/marketplit.ru/wp-content/themes/site100marketplit
+            git clone https://github.com/site100ru/marketplit.git .
+
+            # Для последующих инсталяций
+            # cd /var/www/u1538455/data/www/мозаика62.рф/wp-content/themes/new
+            # git pull
