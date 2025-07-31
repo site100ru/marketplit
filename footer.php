@@ -179,8 +179,8 @@
 				<div class="container">
 					<div class="row">
 						<div class="col text-center">
-							<div id="company-in-footer">©2023 Маркет мебельной плиты</div>
-							<div id="im-in-footer">Создание и продвижение сайтов: <a href="https://сайт100.рф" class="text-light">сайт100.рф</a></div>
+							<div id="company-in-footer">©<?php echo date('Y'); ?> Маркет мебельной плиты</div>
+							<div id="im-in-footer">Создание и продвижение сайтов: <a href="https://site100.ru/" class="text-light">site100.ru</a></div>
 						</div>
 					</div>
 				</div>

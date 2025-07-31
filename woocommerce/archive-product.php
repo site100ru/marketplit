@@ -224,50 +224,7 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- Section descount prices -->
 <div id="discount-section-scroll-point" class="scroll-point"></div>
-<section class="prices-section bg-white py-5">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-8">
-				<h2 class="text-center mb-3">Система скидок</h2>
-				<!--p class="section-description text-center mb-5"></p-->
-				<div class="section-title-decoration-line m-auto">
-					<div class="section-title-decoration-quadro" style="left: 0;"></div>
-					<div class="section-title-decoration-quadro" style="left: 26px;"></div>
-					<div class="section-title-decoration-quadro" style="right: 0px;"></div>
-				</div>
-				<div class="table-responsive">
-					<table class="table">
-						<tbody>
-							<tr>
-								<td><span>Общая сумма при заказе материала<br class="d-none d-md-block"> с распилом от&#160;50&#160;000 руб</span></td>
-								<td class="text-end"><span class="price-discount">скидка 5% + бесплатная доставка</span></td>
-							</tr>
-							<tr style="position: relative;">
-								<td><span>Общая сумма при заказе материала<br class="d-none d-md-block"> с распилом от&#160;100&#160;000 руб</span></td>
-								<td class="text-end">
-									<span class="price-discount">скидка 10% + бесплатная доставка</span>
-									<span class="price-description" style="position: absolute; bottom: -22px; right: 0;">в пределах МКАД</span>
-								</td>
-							</tr>
-							<tr style="position: relative;">
-								<td><span>Общая сумма при заказе материала<br class="d-none d-md-block"> с распилом от&#160;200&#160;000 руб</span></td>
-								<td class="text-end">
-									<span class="price-discount">скидка 15% + бесплатная доставка</span>
-									<span class="price-description" style="position: absolute; bottom: -22px; right: 0;">по Москве и МО до 50 км</span>
-								</td>
-							</tr>
-							<tr>
-								<td><span>Общая сумма при заказе материала<br class="d-none d-md-block"> с распилом от&#160;500&#160;000 руб</span></td>
-								<td class="text-end"><span class="price-discount">особые условия</span></td>
-							</tr>
-						</tbody>
-					</table>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+<?php get_template_part('template-parts/discount-prices/discount-prices'); ?>
 <!-- /Section descount prices -->
 
 
@@ -286,7 +243,7 @@ defined( 'ABSPATH' ) || exit;
 								<a class="nav-link ico-button px-0" href="whatsapp://send?phone=+79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link ico-button pe-0" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
+								<a class="nav-link ico-button pe-0" href="tg://resolve?domain=NikolaevAA2023"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link ico-button pe-0" href="viber://chat?number=79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/viber-ico.png"></a>
