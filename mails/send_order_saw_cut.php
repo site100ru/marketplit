@@ -22,7 +22,7 @@
 
 		$headers = "MIME-Version: 1.0\r\n";
 		
-		$headers .= "From: marketplit.ru\r\n";
+    $headers .= "From: info@marketplit.ru\r\n";
 
 		$headers .="Content-Type: multipart/mixed; boundary=\"$boundary\"\n"; 
 
