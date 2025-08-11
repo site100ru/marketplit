@@ -57,10 +57,10 @@
 	}
 	
 	
-	/* Если существует переменная POST, то
+	/* Если существует переменная POST, то */
 	if($_POST) {
 		// Отправляем данные в Google
-		function getCaptcha($SecretKey){
+		/*function getCaptcha($SecretKey){
 			$Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdV1IcUAAAAABnQ0mXIp5Yh7tLEcAXzdqG6rx9Y&response={$SecretKey}");
 			$Return = json_decode($Response);
 			return $Return;
@@ -80,7 +80,7 @@
 			
 			$picture = "";
 			// $mail_to = "vasilyev-r@mail.ru, 1752800@mail.ru"; // Адрес доставки почты
-			$mail_to = "sidorov-vv3@mail.ru"; // Адрес доставки почты
+			$mail_to = "vasilyev-r@mail.ru, sidorov-vv3@mail.ru"; // Адрес доставки почты
 			$thm = "Зявка на распил с сайта marketplit.ru"; // Тема письма
 			
 			$file_type = $_FILES['mail_file']['type'];
@@ -121,11 +121,7 @@
 				$headers = "MIME-Version: 1.0\r\n";
 				$headers .= "From: marketplit.ru\r\n";
 				$headers .= "Content-type: text/html; charset=utf-8\r\n";
-				$msg = "
-					<strong>Имя:</strong> ".$name."<br><br>
-					<strong>Телефон:</strong> ".$tel."<br><br>
-					<strong>Сообщение:</strong> ".$mes."<br><br>
-				";
+				$msg = "Заявка на распил с сайта marketplit.ru";
 				mail( $mail_to, $thm, $msg, $headers );
 			} else {
 				$msg = "Заявка на распил.";
@@ -142,6 +138,6 @@
 			$_SESSION['win'] = 1;
 			$_SESSION['recaptcha'] = '<p class="text-light"><strong>Извините!</strong><br>Ваши действия похожи на робота. Пожалуйста повторите попытку!</p>';
 			header("Location: ".$_SERVER['HTTP_REFERER']);
-		}
-	} */
+		}*/
+	}
 ?>
