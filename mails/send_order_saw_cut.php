@@ -122,7 +122,7 @@
 			/* Отправляем почтовое сообщение  */
 			if ( empty( $picture ) ) {
 				$headers = "MIME-Version: 1.0\r\n";
-				$headers .= "From: marketplit.ru\r\n";
+				$headers .= "From: info@marketplit.ru\r\n";
 				$headers .= "Content-type: text/html; charset=utf-8\r\n";
 				$msg = "Заявка на распил с сайта marketplit.ru (без файла)";
 				mail( $mail_to, $thm, $msg, $headers );
