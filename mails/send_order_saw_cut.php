@@ -57,8 +57,8 @@
 	}
 	
 	
-	/* Если существует переменная POST, то */
-	if($_POST) {
+	// Если существует переменная POST, то
+	if($_POST){
 		// Отправляем данные в Google
 		/*function getCaptcha($SecretKey){
 			$Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdV1IcUAAAAABnQ0mXIp5Yh7tLEcAXzdqG6rx9Y&response={$SecretKey}");
@@ -83,35 +83,38 @@
 			$mail_to = "vasilyev-r@mail.ru, sidorov-vv3@mail.ru"; // Адрес доставки почты
 			$thm = "Зявка на распил с сайта marketplit.ru"; // Тема письма
 			
-			$file_type = $_FILES['mail_file']['type'];
-			$file_size = $_FILES['mail_file']['size'];
-			
-			// Используем, если отправка файла обязательная
-			/* Если поле выбора вложения не пустое - закачиваем его на сервер
-			if ( !empty( $_FILES['mail_file']['tmp_name'] ) and ( $file_type == 'image/png' OR  $file_type == 'image/jpeg' OR $file_type ==  'application/pdf' ) and ( $file_size < 5120000 ) ) { 
-				// Закачиваем файл 
-				$path = 'mail-img/'.$_FILES['mail_file']['name']; 
-				if (copy($_FILES['mail_file']['tmp_name'], $path)) $picture = $path; 
-			} else {
-				$_SESSION['win'] = 1;
-				$_SESSION['recaptcha'] = '<p class="text-light">Неправильный формат или размер файла. Файл должен быть в формате .jpg, .jpeg, .png или .pdf и размером не более 5 МБ. Пожалуйста повторите попытку.</p>';
-				header("Location: ".$_SERVER['HTTP_REFERER']);
-				exit();
-			} */
-			
-			// Используем, если отправка файла НЕ обязательная
-			// Если изображение есть то проверяем его на соответствие требованиям
-			// Если нет изображение, то ничего не делаем
-			if ( !empty( $_FILES['mail_file']['tmp_name'] ) ) { 
-				if ( ( $file_type ==  'application/vnd.ms-excel' OR $file_type == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' ) and ( $file_size < 5120000 ) ) {
+			// Проверяем что файл был загружен
+			if (isset($_FILES['mail_file']) && !empty($_FILES['mail_file']['tmp_name'])) {
+				$file_type = $_FILES['mail_file']['type'];
+				$file_size = $_FILES['mail_file']['size'];
+				
+				// Используем, если отправка файла обязательная
+				/* Если поле выбора вложения не пустое - закачиваем его на сервер
+				if ( !empty( $_FILES['mail_file']['tmp_name'] ) and ( $file_type == 'image/png' OR  $file_type == 'image/jpeg' OR $file_type ==  'application/pdf' ) and ( $file_size < 5120000 ) ) { 
 					// Закачиваем файл 
 					$path = 'mail-img/'.$_FILES['mail_file']['name']; 
-					if ( copy($_FILES['mail_file']['tmp_name'], $path) ) { $picture = $path; }
+					if (copy($_FILES['mail_file']['tmp_name'], $path)) $picture = $path; 
 				} else {
 					$_SESSION['win'] = 1;
-					$_SESSION['recaptcha'] = '<p class="text-light">Вы пытаетесь загрузить неподходящий формат или размер файла. Файл должен быть в формате .xls или .xlsx и размером не более 5 МБ. Пожалуйста повторите попытку.</p>';
+					$_SESSION['recaptcha'] = '<p class="text-light">Неправильный формат или размер файла. Файл должен быть в формате .jpg, .jpeg, .png или .pdf и размером не более 5 МБ. Пожалуйста повторите попытку.</p>';
 					header("Location: ".$_SERVER['HTTP_REFERER']);
 					exit();
+				} */
+				
+				// Используем, если отправка файла НЕ обязательная
+				// Если изображение есть то проверяем его на соответствие требованиям
+				// Если нет изображение, то ничего не делаем
+				if ( !empty( $_FILES['mail_file']['tmp_name'] ) ) { 
+					if ( ( $file_type ==  'application/vnd.ms-excel' OR $file_type == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' ) and ( $file_size < 5120000 ) ) {
+						// Закачиваем файл 
+						$path = 'mail-img/'.$_FILES['mail_file']['name']; 
+						if ( copy($_FILES['mail_file']['tmp_name'], $path) ) { $picture = $path; }
+					} else {
+						$_SESSION['win'] = 1;
+						$_SESSION['recaptcha'] = '<p class="text-light">Вы пытаетесь загрузить неподходящий формат или размер файла. Файл должен быть в формате .xls или .xlsx и размером не более 5 МБ. Пожалуйста повторите попытку.</p>';
+						header("Location: ".$_SERVER['HTTP_REFERER']);
+						exit();
+					}
 				}
 			}
 			
@@ -121,7 +124,7 @@
 				$headers = "MIME-Version: 1.0\r\n";
 				$headers .= "From: marketplit.ru\r\n";
 				$headers .= "Content-type: text/html; charset=utf-8\r\n";
-				$msg = "Заявка на распил с сайта marketplit.ru";
+				$msg = "Заявка на распил с сайта marketplit.ru (без файла)";
 				mail( $mail_to, $thm, $msg, $headers );
 			} else {
 				$msg = "Заявка на распил.";
