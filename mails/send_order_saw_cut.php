@@ -1,8 +1,18 @@
 <?php
-	//ini_set('error_reporting', E_ALL);
-	//ini_set('display_errors', 1);
-	//ini_set('display_startup_errors', 1);
+	ini_set('error_reporting', E_ALL);
+	ini_set('display_errors', 1);
+	ini_set('display_startup_errors', 1);
 	session_start();
+	
+	// ОТЛАДКА - выводим всё что получили
+	echo "<h3>DEBUG INFO:</h3>";
+	echo "<pre>";
+	echo "POST данные:\n";
+	print_r($_POST);
+	echo "\nFILES данные:\n";
+	print_r($_FILES);
+	echo "</pre>";
+	
 	$win = "true";
 	
 	// Вспомогательная функция для отправки почтового сообщения с вложением 
@@ -11,7 +21,7 @@
 		
 		/* Если нет файла */
 		if ( !$fp ) { 
-			print "Файл $path не может быть прочитан"; 
+			echo "Файл $path не может быть прочитан"; 
 			exit(); 
 		}
 
@@ -21,126 +31,108 @@
 		$boundary = "--".md5(uniqid(time())); // генерируем разделитель 
 
 		$headers = "MIME-Version: 1.0\r\n";
-		
 		$headers .= "From: marketplit.ru\r\n";
-
 		$headers .="Content-Type: multipart/mixed; boundary=\"$boundary\"\n"; 
 
 		$multipart = "--$boundary\n";
-
-		$kod = 'utf-8'; // или $kod = 'windows-1251 или koi8-r'; 
-
+		$kod = 'utf-8'; 
 		$multipart .= "Content-Type: text/html; charset=$kod\n"; 
-
 		$multipart .= "Content-Transfer-Encoding: Quot-Printed\n\n"; 
-
 		$multipart .= "$html\n\n"; 
 
 		$message_part = "--$boundary\n"; 
-
 		$message_part .= "Content-Type: application/octet-stream\n"; 
-
 		$message_part .= "Content-Transfer-Encoding: base64\n"; 
-
 		$message_part .= "Content-Disposition: attachment; filename = \"".$path."\"\n\n"; 
-
 		$message_part .= chunk_split(base64_encode($file))."\n"; 
-
 		$multipart .= $message_part."--$boundary--\n"; 
 
-
-		/**/
 		if ( !mail( $to, $thm, $multipart, $headers ) ) { 
 			echo "К сожалению, письмо не отправлено"; 
 			exit();
+		} else {
+			echo "Письмо с файлом отправлено успешно!<br>";
 		}
 	}
 	
-	
 	// Если существует переменная POST, то
 	if($_POST){
-		// Отправляем данные в Google
-		/*function getCaptcha($SecretKey){
-			$Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdV1IcUAAAAABnQ0mXIp5Yh7tLEcAXzdqG6rx9Y&response={$SecretKey}");
-			$Return = json_decode($Response);
-			return $Return;
+		echo "<p style='color: green;'>POST запрос получен!</p>";
+		
+		$picture = "";
+		$mail_to = "vasilyev-r@mail.ru, sidorov-vv3@mail.ru"; 
+		$thm = "Заявка на распил с сайта marketplit.ru"; 
+		
+		// Проверяем что файл был загружен
+		if (isset($_FILES['mail_file']) && !empty($_FILES['mail_file']['tmp_name'])) {
+			echo "<p style='color: blue;'>Файл загружен!</p>";
+			
+			$file_type = $_FILES['mail_file']['type'];
+			$file_size = $_FILES['mail_file']['size'];
+			
+			echo "Тип файла: " . $file_type . "<br>";
+			echo "Размер файла: " . $file_size . " байт<br>";
+			
+			if ( ( $file_type ==  'application/vnd.ms-excel' OR $file_type == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' ) and ( $file_size < 5120000 ) ) {
+				echo "<p style='color: green;'>Файл прошел проверку типа и размера!</p>";
+				
+				// Создаем папку если нет
+				if (!is_dir('mail-img')) {
+					mkdir('mail-img', 0755, true);
+					echo "Создана папка mail-img<br>";
+				}
+				
+				$path = 'mail-img/'.$_FILES['mail_file']['name']; 
+				echo "Путь для сохранения: " . $path . "<br>";
+				
+				if ( copy($_FILES['mail_file']['tmp_name'], $path) ) { 
+					echo "<p style='color: green;'>Файл успешно скопирован!</p>";
+					$picture = $path; 
+				} else {
+					echo "<p style='color: red;'>Ошибка при копировании файла!</p>";
+				}
+			} else {
+				echo "<p style='color: red;'>Файл не прошел проверку!</p>";
+				echo "Допустимые типы: application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet<br>";
+				echo "Максимальный размер: 5120000 байт<br>";
+				
+				$_SESSION['win'] = 1;
+				$_SESSION['recaptcha'] = '<p class="text-light">Вы пытаетесь загрузить неподходящий формат или размер файла. Файл должен быть в формате .xls или .xlsx и размером не более 5 МБ. Пожалуйста повторите попытку.</p>';
+				header("Location: ".$_SERVER['HTTP_REFERER']);
+				exit();
+			}
+		} else {
+			echo "<p style='color: red;'>Файл НЕ загружен!</p>";
 		}
 		
-		print_r( $Return );
-		
-		// Принимаем данные обратно
-		$Return = getCaptcha($_POST['g-recaptcha-response']);
-		// Если вероятность робота более 0.5, то считаем отправителя человеком и выполняем отправку почты
-		if( $Return->success == true && $Return->score > 0.05 ) { */
+		/* Отправляем почтовое сообщение  */
+		if ( empty( $picture ) ) {
+			echo "<p style='color: orange;'>Отправляем письмо БЕЗ файла</p>";
+			$headers = "MIME-Version: 1.0\r\n";
+			$headers .= "From: marketplit.ru\r\n";
+			$headers .= "Content-type: text/html; charset=utf-8\r\n";
+			$msg = "Заявка на распил с сайта marketplit.ru (без файла)";
 			
-			
-			//$name = $_POST['name'];
-			//$tel = $_POST['tel'];
-			//$mes = $_POST['mes'];
-			
-			$picture = "";
-			// $mail_to = "vasilyev-r@mail.ru, 1752800@mail.ru"; // Адрес доставки почты
-			$mail_to = "sidorov-vv3@mail.ru"; // Адрес доставки почты
-			$thm = "Зявка на распил с сайта marketplit.ru"; // Тема письма
-			
-			// Проверяем что файл был загружен
-			if (isset($_FILES['mail_file']) && !empty($_FILES['mail_file']['tmp_name'])) {
-				$file_type = $_FILES['mail_file']['type'];
-				$file_size = $_FILES['mail_file']['size'];
-				
-				// Используем, если отправка файла обязательная
-				/* Если поле выбора вложения не пустое - закачиваем его на сервер
-				if ( !empty( $_FILES['mail_file']['tmp_name'] ) and ( $file_type == 'image/png' OR  $file_type == 'image/jpeg' OR $file_type ==  'application/pdf' ) and ( $file_size < 5120000 ) ) { 
-					// Закачиваем файл 
-					$path = 'mail-img/'.$_FILES['mail_file']['name']; 
-					if (copy($_FILES['mail_file']['tmp_name'], $path)) $picture = $path; 
-				} else {
-					$_SESSION['win'] = 1;
-					$_SESSION['recaptcha'] = '<p class="text-light">Неправильный формат или размер файла. Файл должен быть в формате .jpg, .jpeg, .png или .pdf и размером не более 5 МБ. Пожалуйста повторите попытку.</p>';
-					header("Location: ".$_SERVER['HTTP_REFERER']);
-					exit();
-				} */
-				
-				// Используем, если отправка файла НЕ обязательная
-				// Если изображение есть то проверяем его на соответствие требованиям
-				// Если нет изображение, то ничего не делаем
-				if ( !empty( $_FILES['mail_file']['tmp_name'] ) ) { 
-					if ( ( $file_type ==  'application/vnd.ms-excel' OR $file_type == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' ) and ( $file_size < 5120000 ) ) {
-						// Закачиваем файл 
-						$path = 'mail-img/'.$_FILES['mail_file']['name']; 
-						if ( copy($_FILES['mail_file']['tmp_name'], $path) ) { $picture = $path; }
-					} else {
-						$_SESSION['win'] = 1;
-						$_SESSION['recaptcha'] = '<p class="text-light">Вы пытаетесь загрузить неподходящий формат или размер файла. Файл должен быть в формате .xls или .xlsx и размером не более 5 МБ. Пожалуйста повторите попытку.</p>';
-						header("Location: ".$_SERVER['HTTP_REFERER']);
-						exit();
-					}
-				}
-			}
-			
-			
-			/* Отправляем почтовое сообщение  */
-			if ( empty( $picture ) ) {
-				$headers = "MIME-Version: 1.0\r\n";
-				$headers .= "From: marketplit.ru\r\n";
-				$headers .= "Content-type: text/html; charset=utf-8\r\n";
-				$msg = "Заявка на распил с сайта marketplit.ru (без файла)";
-				mail( $mail_to, $thm, $msg, $headers );
+			if (mail( $mail_to, $thm, $msg, $headers )) {
+				echo "<p style='color: green;'>Письмо без файла отправлено!</p>";
 			} else {
-				$msg = "Заявка на распил.";
-				send_mail($mail_to, $thm, $msg, $picture);
+				echo "<p style='color: red;'>Ошибка отправки письма без файла!</p>";
 			}
-			
-			$_SESSION['win'] = 1;
-			$_SESSION['recaptcha'] = '<p class="text-light">Спасибо за Вашу заявку. Мы ответим Вам в&#160;ближайшее время.</p>';
-			header("Location: ".$_SERVER['HTTP_REFERER']);
+		} else {
+			echo "<p style='color: orange;'>Отправляем письмо С файлом</p>";
+			$msg = "Заявка на распил.";
+			send_mail($mail_to, $thm, $msg, $picture);
+		}
 		
+		$_SESSION['win'] = 1;
+		$_SESSION['recaptcha'] = '<p class="text-light">Спасибо за Вашу заявку. Мы ответим Вам в&#160;ближайшее время.</p>';
 		
-		/* } else {
-			// Иначе считаем отправителя роботом и выводим сообщение с просьбой повторить попытку
-			$_SESSION['win'] = 1;
-			$_SESSION['recaptcha'] = '<p class="text-light"><strong>Извините!</strong><br>Ваши действия похожи на робота. Пожалуйста повторите попытку!</p>';
-			header("Location: ".$_SERVER['HTTP_REFERER']);
-		}*/
+		echo "<p style='color: green;'>Все выполнено! Сейчас будет перенаправление...</p>";
+		echo "<script>setTimeout(function(){ window.location.href = '".$_SERVER['HTTP_REFERER']."'; }, 5000);</script>";
+		// header("Location: ".$_SERVER['HTTP_REFERER']);
+		
+	} else {
+		echo "<p style='color: red;'>POST запрос НЕ получен!</p>";
+		echo "Метод запроса: " . $_SERVER['REQUEST_METHOD'];
 	}
 ?>
