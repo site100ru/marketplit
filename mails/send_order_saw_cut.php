@@ -80,7 +80,7 @@
 			
 			$picture = "";
 			// $mail_to = "vasilyev-r@mail.ru, 1752800@mail.ru"; // Адрес доставки почты
-			$mail_to = "vasilyev-r@mail.ru, sidorov-vv3@mail.ru"; // Адрес доставки почты
+			$mail_to = "sidorov-vv3@mail.ru"; // Адрес доставки почты
 			$thm = "Зявка на распил с сайта marketplit.ru"; // Тема письма
 			
 			// Проверяем что файл был загружен
