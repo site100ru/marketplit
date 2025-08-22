@@ -241,4 +241,13 @@
 		$protocols[] = 'viber';
 		return $protocols;
 	}
+
+	// Изменяем описание способа оплаты "Оплата при доставке"
+	add_filter( 'woocommerce_gateway_description', 'custom_cod_payment_description', 20, 2 );
+	function custom_cod_payment_description( $description, $payment_id ) {
+			if ( 'cod' === $payment_id ) {
+					$description = 'После оформления заказа с Вами свяжется наш менеджер для уточнения деталей по оплате и доставке.';
+			}
+			return $description;
+	}
 ?>
