@@ -21,7 +21,8 @@
 			
 			$name = $_POST['name'];	
 			$tel = $_POST['tel'];	
-			mail( "1752800@mail.ru, vasilyev-r@mail.ru", "Заказ обратного звонка.", "
+			// mail( "1752800@mail.ru, vasilyev-r@mail.ru", "Заказ обратного звонка.", "
+			mail( "sidorov-vv3@mail.ru, vasilyev-r@mail.ru", "Заказ обратного звонка.", "
 				Клиент: " . $name ."\n
 				Телефон: " . $tel
 			); 	

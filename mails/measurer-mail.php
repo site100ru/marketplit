@@ -26,7 +26,8 @@
 			$mes = $_POST['mes'];
 			
 			
-			mail( "vasilyev-r@mail.ru, 1752800@mail.ru", "Заявка на вызов замерщика с сайта.", "
+			// mail( "vasilyev-r@mail.ru, 1752800@mail.ru", "Заявка на вызов замерщика с сайта.", "
+			mail( "sidorov-vv3@mail.ru, vasilyev-r@mail.ru", "Заявка на вызов замерщика с сайта.", "
 				Клиент ".$name."\n
 				Телефон: ".$tel."\n
 				Адрес: ".$adr."\n
