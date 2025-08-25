@@ -58,7 +58,7 @@
 	
 	
 	// Если существует переменная POST, то
-	if($_SERVER['REQUEST_METHOD'] == 'POST'){
+	if($_POST){
 		// Отправляем данные в Google
 		/*function getCaptcha($SecretKey){
 			$Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdV1IcUAAAAABnQ0mXIp5Yh7tLEcAXzdqG6rx9Y&response={$SecretKey}");
@@ -81,7 +81,7 @@
 			$picture = "";
 			$mail_to = "vasilyev-r@mail.ru, 1752800@mail.ru"; // Адрес доставки почты
 			// $mail_to = "vasilyev-r@mail.ru, sidorov-vv3@mail.ru"; // Адрес доставки почты
-			$thm = "Зявка на распил с сайта marketplit.ru"; // Тема письма
+			$thm = "Заявка на распил с сайта marketplit.ru"; // Тема письма
 			
 			// Проверяем что файл был загружен
 			if (isset($_FILES['mail_file']) && !empty($_FILES['mail_file']['tmp_name'])) {
