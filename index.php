@@ -121,31 +121,6 @@
 <!-- /Products -->
 
 
-<!-- About us --
-<div id="about-us-sp" class="scroll-point"></div>
-<section class="about-us-section bg-light">
-	<div class="about-us-section-img d-none d-md-block"></div>
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="offset-md-7 col-md-5">
-				<h2 class="text-darkbrown mb-1">О нас</h2>
-				<div class="title-line mb-5">
-					<div class="title-quadro" style="left: 0;"></div>
-					<div class="title-quadro" style="left: 25px;"></div>
-					<div class="title-quadro" style="right: 0px;"></div>
-				</div>
-				<p>Мы производим кухни, шкафы-купе и другую корпусную мебель с 2011 года. Мы гордимся каждым из наших изделий. Нам нравится делать красивые вещи, нравится получать слова благодарности от наших клиентов. Приятно, когда твоя работа нравится людям!</p>
-				<p class="mb-5 mb-md-0">Каждому нашему клиенту мы гарантируем: качественную, красивую продукцию и индивидуальный подход.</p>
-			</div>
-			<div class="col-md-6">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/about-us-img.jpg" class="img-fluid d-md-none">
-			</div>
-		</div>
-	</div>
-</section>
-<!-- /About us -->
-
-
 <!-- Order section -->
 <section class="order-section bg-light">
 	<div class="container py-md-5">
