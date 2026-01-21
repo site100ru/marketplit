@@ -41,7 +41,7 @@
 									</ul>
 								</div>
 								<div class="col-2 text-end">
-									<a href="tel:‪89299262301‬" class="header-phone text-light">‪8 <span>(929)</span> 926-23-01</a>
+									<a href="tel:+79299262301" class="header-phone text-light"> 8 <span>(929)</span> 926-23-01</a>
 								</div>
 							</div><!-- End Desktop version -->
 							
@@ -69,7 +69,7 @@
 									</ul>
 								</div>
 								<div class="col-12 pt-4">
-									<a href="tel:‪89299262301‬" class="header-phone text-light">‪8 <span>(929)</span> 926-23-01</a>
+									<a href="tel:+79299262301" class="header-phone text-light"> 8 <span>(929)</span> 926-23-01</a>
 								</div>
 							</div><!-- END Mobail version -->
 						</nav>
@@ -109,10 +109,10 @@
 									</li>
 									<!-- Mobile menu -->
 									<li class="nav-item d-xl-none">
-										<a class="nav-link" href="tel:‪89037512663">8 <span>(903)</span> 751-26-63</a>
+										<a class="nav-link" href="tel:+79299262301">8 <span>(929)</span> 926-23-01</a>
 									</li>
 									<li class="nav-item d-xl-none">
-										<a class="nav-link" href="#‬">‪Обратный звонок‬</a>
+										<a class="nav-link" href="#"> Обратный звонок </a>
 									</li>
 									<li class="nav-item d-xl-none mb-2">
 										<a class="ico-button pe-1" href="whatsapp://send?phone=+79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>

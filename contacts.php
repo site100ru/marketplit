@@ -131,7 +131,7 @@
 								<img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegran-contacts-ico.png">
 							</div>
 							<div class="float-right">
-								<strong>Telegram:</strong> @telegram_nikname
+								<strong>Telegram:</strong> @NikolaevAA2023
 							</div>
 							<div style="clear: both;"></div>
 						</li>

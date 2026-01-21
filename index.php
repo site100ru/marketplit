@@ -153,7 +153,7 @@
 					<div class="col-lg-6 offset-lg-6 py-5 my-0 my-lg-3 text-dark">
 						<h3 class="mb-3">Нужна помощь в выборе нашего товара или услуги?</h3>
 						<p>Позвоните на по телефону или напишите в мессенджер и наш специалист ответит на все Ваши вопросы!</p>
-						<p><a href="tel:‪89299262301‬" class="header-phone">‪8 <span>(929)</span> 926-23-01</a></p>
+						<p><a href="tel:+79299262301" class="header-phone"> 8 <span>(929)</span> 926-23-01</a></p>
 						<ul class="nav mb-2 mb-lg-0">
 							<li class="nav-item">
 								<a class="nav-link ico-button px-0" href="whatsapp://send?phone=+79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
