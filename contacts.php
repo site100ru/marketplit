@@ -128,7 +128,7 @@
 						</li-->
 						<li class="nav-item mb-3 me-3 text-dark">
 							<div class="float-left">
-								<a href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/max.png"></a>
+								<a href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/max-ico.svg"></a>
 							</div>
 							<div class="float-right">
 								<strong>Max:</strong> 8 (929) 926-23-01
