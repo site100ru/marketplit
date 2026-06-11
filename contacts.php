@@ -6,8 +6,8 @@
 	get_header();
 	
 ?>
-		
-		
+
+
 <!-- Header -->
 <header class="second-header">
 	<div class="parallax"></div>
@@ -106,8 +106,8 @@
 				</div>
 				<div class="col-md-4 pb-5">
 					<ul style="list-style: none; padding-left: 0;">
-						
-						
+
+
 						<li class="nav-item mb-3 me-3 text-dark">
 							<div class="float-left">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-contacts-ico.png">
@@ -117,12 +117,21 @@
 							</div>
 							<div style="clear: both;"></div>
 						</li>
-						<li class="nav-item mb-3 me-3 text-dark">
+						<!--li class="nav-item mb-3 me-3 text-dark">
 							<div class="float-left">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/ico/viber-min-ico.png">
 							</div>
 							<div class="float-right">
 								<strong>Viber:</strong> 8 (929) 926-23-01
+							</div>
+							<div style="clear: both;"></div>
+						</li-->
+						<li class="nav-item mb-3 me-3 text-dark">
+							<div class="float-left">
+								<a href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/max.png"></a>
+							</div>
+							<div class="float-right">
+								<strong>Max:</strong> 8 (929) 926-23-01
 							</div>
 							<div style="clear: both;"></div>
 						</li>
@@ -135,7 +144,7 @@
 							</div>
 							<div style="clear: both;"></div>
 						</li>
-						
+
 						<!--li class="nav-item mb-3 me-3 text-dark">
 							<div class="float-left">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/ico/location-ico.png">
@@ -206,6 +215,6 @@
 	</div>
 </section>
 <!-- /Product -->
-		
-		
+
+
 <?php get_footer(); ?>

@@ -31,8 +31,8 @@ defined( 'ABSPATH' ) || exit;
  get_header();
 
 ?>
-		
-	
+
+
 <!-- Header -->
 <header class="woocommerce-products-header second-header">
 	<div class="parallax"></div>
@@ -80,7 +80,7 @@ defined( 'ABSPATH' ) || exit;
 		</div>
 	</div>
 	<?php /*if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+	<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
 	<?php endif; ?>
 
 	<?php
@@ -93,7 +93,7 @@ defined( 'ABSPATH' ) || exit;
 	//do_action( 'woocommerce_archive_description' );
 	?>
 </header>
-<!-- /Header -->	
+<!-- /Header -->
 
 
 <!-- Products -->
@@ -121,9 +121,9 @@ defined( 'ABSPATH' ) || exit;
 							
 							dynamic_sidebar( 'wsidebar-1' );
 						?>
-						
+
 						<!--button type="button" class="btn btn-corporate-1 mt-4 mb-5 mb-md-0" style="width: 175px;">Показать</button-->
-						
+
 						<div class="discount-card rounded shadow mt-4">
 							<h4 class="mb-3">У нас действует система скидок</h4>
 							<h4 class="mb-3">
@@ -196,7 +196,7 @@ defined( 'ABSPATH' ) || exit;
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 </section>
@@ -229,7 +229,8 @@ defined( 'ABSPATH' ) || exit;
 
 
 <section class="order-section-2 bg-light">
-	<div class="container"> <!-- container/container-fluid -->
+	<div class="container">
+		<!-- container/container-fluid -->
 		<div class="row justify-content-center">
 			<div class="col-lg-10 py-lg-5" style="position: relative;">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/men.png" class="d-none d-lg-block" style="max-width: 425px; position: absolute; bottom: -10px; left: 50px;">
@@ -246,7 +247,8 @@ defined( 'ABSPATH' ) || exit;
 								<a class="nav-link ico-button pe-0" href="tg://resolve?domain=NikolaevAA2023"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link ico-button pe-0" href="viber://chat?number=79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/viber-ico.png"></a>
+								<!--a class="nav-link ico-button pe-0" href="viber://chat?number=79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/viber-ico.png"></a-->
+								<a class="nav-link ico-button pe-0" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/max.png"></a>
 							</li>
 							<!--li class="nav-item">
 								<a class="nav-link ico-button pe-0" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/inst-ico.png"></a>

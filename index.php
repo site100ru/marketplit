@@ -6,8 +6,8 @@
 	get_header();
 	
 ?>
-		
-		
+
+
 <!-- Header -->
 <header>
 	<div class="parallax"></div>
@@ -145,7 +145,8 @@
 
 
 <section class="order-section-2 bg-light">
-	<div class="container"> <!-- container/container-fluid -->
+	<div class="container">
+		<!-- container/container-fluid -->
 		<div class="row justify-content-center">
 			<div class="col-lg-10 py-lg-5" style="position: relative;">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/men.png" class="d-none d-lg-block" style="max-width: 425px; position: absolute; bottom: -10px; left: 50px;">
@@ -162,7 +163,8 @@
 								<a class="nav-link ico-button pe-0" href="tg://resolve?domain=NikolaevAA2023"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link ico-button pe-0" href="viber://chat?number=79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/viber-ico.png"></a>
+								<!--a class="nav-link ico-button pe-0" href="viber://chat?number=79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/viber-ico.png"></a-->
+								<a class="nav-link ico-button pe-0" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/max.png"></a>
 							</li>
 							<!--li class="nav-item">
 								<a class="nav-link ico-button pe-0" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/inst-ico.png"></a>
@@ -178,6 +180,6 @@
 		</div>
 	</div>
 </section>
-		
-		
+
+
 <?php get_footer(); ?>
