@@ -136,6 +136,7 @@
 						<li class="nav-item mb-3 me-3 text-dark">
 							<a class="text-dark" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM">
 								<div class="float-left">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/max-ico.svg">
 								</div>
 								<div class="float-right">
 									<strong>Max:</strong> 8 (929) 926-23-01
