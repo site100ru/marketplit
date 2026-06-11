@@ -49,22 +49,26 @@
 							<div style="clear: both;"></div>
 						</li>
 						<li class="nav-item mb-3 me-3 text-dark">
-							<div class="float-left">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/ico/phone-ico.png">
-							</div>
-							<div class="float-right">
-								<strong>Телефон:</strong> 8 (929) 926-23-01
-							</div>
-							<div style="clear: both;"></div>
+							<a class="text-dark" href="tel:+79299262301">
+								<div class="float-left">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/phone-ico.png">
+								</div>
+								<div class="float-right">
+									<strong>Телефон:</strong> 8 (929) 926-23-01
+								</div>
+								<div style="clear: both;"></div>
+							</a>
 						</li>
 						<li class="nav-item mb-3 me-3 text-dark">
-							<div class="float-left">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/ico/email-ico.png">
-							</div>
-							<div class="float-right">
-								<strong>Email:</strong> 1752800@mail.ru
-							</div>
-							<div style="clear: both;"></div>
+							<a class="text-dark" href="mailto:7928283@mail.ru">
+								<div class="float-left">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/email-ico.png">
+								</div>
+								<div class="float-right">
+									<strong>Email:</strong> 1752800@mail.ru
+								</div>
+								<div style="clear: both;"></div>
+							</a>
 						</li>
 						<!--li class="nav-item mb-3 me-3 text-dark">
 							<div class="float-left">
@@ -109,12 +113,15 @@
 
 
 						<li class="nav-item mb-3 me-3 text-dark">
-							<div class="float-left">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-contacts-ico.png">
-							</div>
-							<div class="float-right">
-								<strong>Whatsapp:</strong> 8 (929) 926-23-01
-							</div>
+							<a class="text-dark" href="whatsapp://send?phone=+79299262301">
+
+								<div class="float-left">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-contacts-ico.png">
+								</div>
+								<div class="float-right">
+									<strong>Whatsapp:</strong> 8 (929) 926-23-01
+								</div>
+							</a>
 							<div style="clear: both;"></div>
 						</li>
 						<!--li class="nav-item mb-3 me-3 text-dark">
@@ -127,21 +134,26 @@
 							<div style="clear: both;"></div>
 						</li-->
 						<li class="nav-item mb-3 me-3 text-dark">
-							<div class="float-left">
-								<a href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/max-ico.svg"></a>
-							</div>
-							<div class="float-right">
-								<strong>Max:</strong> 8 (929) 926-23-01
-							</div>
+							<a class="text-dark" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM">
+								<div class="float-left">
+								</div>
+								<div class="float-right">
+									<strong>Max:</strong> 8 (929) 926-23-01
+								</div>
+							</a>
+
 							<div style="clear: both;"></div>
 						</li>
 						<li class="nav-item mb-3 me-3 text-dark">
-							<div class="float-left">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegran-contacts-ico.png">
-							</div>
-							<div class="float-right">
-								<strong>Telegram:</strong> @NikolaevAA2023
-							</div>
+							<a class="text-dark" href="tg://resolve?domain=NikolaevAA2023">
+
+								<div class="float-left">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegran-contacts-ico.png">
+								</div>
+								<div class="float-right">
+									<strong>Telegram:</strong> @NikolaevAA2023
+								</div>
+							</a>
 							<div style="clear: both;"></div>
 						</li>
 
