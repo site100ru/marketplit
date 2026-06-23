@@ -24,15 +24,20 @@
 			$tel = $_POST['tel'];
 			$adr = $_POST['adr'];
 			$mes = $_POST['mes'];
-			
-			
-			// mail( "sidorov-vv3@mail.ru, vasilyev-r@mail.ru", "Заявка на вызов замерщика с сайта.", "
-			mail( "vasilyev-r@mail.ru, 1752800@mail.ru", "Заявка на вызов замерщика с сайта.", "
-				Клиент ".$name."\n
-				Телефон: ".$tel."\n
-				Адрес: ".$adr."\n
-				Доп. инф: ".$mes."\n
-			" );
+
+			$headers  = "MIME-Version: 1.0\r\n";
+			$headers .= "From: info@marketplit.ru\r\n";
+			$headers .= "Reply-To: info@marketplit.ru\r\n";
+			$headers .= "Return-Path: info@marketplit.ru\r\n";
+			$headers .= "Content-type: text/html; charset=utf-8\r\n";
+
+			// mail( "vasilyev-r@mail.ru, 1752800@mail.ru", "Заявка на вызов замерщика с сайта.", "
+			mail( "sidorov-vv3@mail.ru, vasilyev-r@mail.ru", "Заявка на вызов замерщика с сайта.", "
+				Клиент ".$name."<br>
+				Телефон: ".$tel."<br>
+				Адрес: ".$adr."<br>
+				Доп. инф: ".$mes."<br>
+			", $headers );
 			
 			//mail( "infoskmeridian@mail.ru", "Заявка с сайта meridian-vorot.ru", "Услуга: ".$service."\n\nКлиент ".$name."\n\nТелефон: ".$tel ); 
 			$_SESSION['win'] = 1;

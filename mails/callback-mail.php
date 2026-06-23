@@ -19,13 +19,21 @@
 		// Если вероятность робота более 0.5, то считаем отправителя человеком и выполняем отправку почты
 		if( $Return->success == true && $Return->score > 1 ){ */
 			
-			$name = $_POST['name'];	
-			$tel = $_POST['tel'];	
-			// mail( "sidorov-vv3@mail.ru, vasilyev-r@mail.ru", "Заказ обратного звонка.", "
-			mail( "1752800@mail.ru, vasilyev-r@mail.ru", "Заказ обратного звонка.", "
-				Клиент: " . $name ."\n
-				Телефон: " . $tel
-			); 	
+			$name = $_POST['name'];
+			$tel = $_POST['tel'];
+
+			$headers  = "MIME-Version: 1.0\r\n";
+			$headers .= "From: info@marketplit.ru\r\n";
+			$headers .= "Reply-To: info@marketplit.ru\r\n";
+			$headers .= "Return-Path: info@marketplit.ru\r\n";
+			$headers .= "Content-type: text/html; charset=utf-8\r\n";
+
+			// mail( "1752800@mail.ru, vasilyev-r@mail.ru", "Заказ обратного звонка.", "
+			mail( "sidorov-vv3@mail.ru, vasilyev-r@mail.ru", "Заказ обратного звонка.", "
+				Клиент: " . $name ."<br>
+				Телефон: " . $tel,
+				$headers
+			);
 			$_SESSION['win'] = 1;
 			$_SESSION['recaptcha'] = '<p class="text-light">Спасибо за обращение в «Маркет мебельной плиты». В&#160;ближайшее время с Вами свяжется наш специалист.</p>';
 			header("Location: ".$_SERVER['HTTP_REFERER']);
