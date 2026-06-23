@@ -57,8 +57,8 @@
 	}
 	
 	
-	// Если существует переменная POST, то
-	if($_POST){
+	// Если форма отправлена методом POST, то
+	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 		// Отправляем данные в Google
 		/*function getCaptcha($SecretKey){
 			$Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdV1IcUAAAAABnQ0mXIp5Yh7tLEcAXzdqG6rx9Y&response={$SecretKey}");
