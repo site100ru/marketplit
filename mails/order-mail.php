@@ -28,8 +28,8 @@
 			$headers .= "Return-Path: info@marketplit.ru\r\n";
 			$headers .= "Content-type: text/html; charset=utf-8\r\n";
 
-			// mail( "1752800@mail.ru, vasilyev-r@mail.r", "Заявка с сайта marketplit.ru", "
-			mail( "sidorov-vv3@mail.ru, vasilyev-r@mail.r", "Заявка с сайта marketplit.ru", "
+			// mail( "sidorov-vv3@mail.ru, vasilyev-r@mail.r", "Заявка с сайта marketplit.ru", "
+			mail( "1752800@mail.ru, vasilyev-r@mail.r", "Заявка с сайта marketplit.ru", "
 
 				Клиент: " . $name ."<br>
 				Телефон: " . $tel,

@@ -31,8 +31,8 @@
 			$headers .= "Return-Path: info@marketplit.ru\r\n";
 			$headers .= "Content-type: text/html; charset=utf-8\r\n";
 
-			// mail( "vasilyev-r@mail.ru, 1752800@mail.ru", "Заявка на вызов замерщика с сайта.", "
-			mail( "sidorov-vv3@mail.ru, vasilyev-r@mail.ru", "Заявка на вызов замерщика с сайта.", "
+			// mail( "sidorov-vv3@mail.ru, vasilyev-r@mail.ru", "Заявка на вызов замерщика с сайта.", "
+			mail( "1752800@mail.ru, vasilyev-r@mail.ru", "Заявка на вызов замерщика с сайта.", "
 				Клиент ".$name."<br>
 				Телефон: ".$tel."<br>
 				Адрес: ".$adr."<br>
