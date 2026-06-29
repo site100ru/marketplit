@@ -98,10 +98,10 @@
 					</ul>
 				</div>
 				<div class="col-2">
-					<a class="ico-button pe-1" href="whatsapp://send?phone=+79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
-					<a class="ico-button pe-1" href="tg://resolve?domain=NikolaevAA2023"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
+					<a class="ico-button pe-1" href="whatsapp://send?phone=+79299262301" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
+					<a class="ico-button pe-1" href="tg://resolve?domain=NikolaevAA2023" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
 					<!--a class="ico-button pe-1" href="viber://chat?number=79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/viber-ico.png"></a-->
-					<a class="ico-button pe-1" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/max.png"></a>
+					<a class="ico-button pe-1" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/max.png"></a>
 					<!--a class="ico-button pe-1" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/inst-ico.png"></a>
 						<a class="ico-button" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/vk-ico.png"></a-->
 				</div>
@@ -132,10 +132,10 @@
 								<ul id="%1$s" class="navbar-nav me-auto mb-2 mb-lg-0 %2$s">%3$s
 									<!-- Mobile menu -->
 									<li class="nav-item d-xl-none pt-2">
-										<a class="ico-button pe-2" href="whatsapp://send?phone=+79299262301"><img src="'.get_template_directory_uri().'/img/ico/whatsapp-ico.png"></a>
-										<a class="ico-button pe-2" href="tg://resolve?domain=NikolaevAA2023"><img src="'.get_template_directory_uri().'/img/ico/telegram-ico.png"></a>
+										<a class="ico-button pe-2" href="whatsapp://send?phone=+79299262301" target="_blank"><img src="'.get_template_directory_uri().'/img/ico/whatsapp-ico.png"></a>
+										<a class="ico-button pe-2" href="tg://resolve?domain=NikolaevAA2023" target="_blank"><img src="'.get_template_directory_uri().'/img/ico/telegram-ico.png"></a>
 										<!--a class="ico-button pe-2" href="viber://chat?number=79299262301"><img src="'.get_template_directory_uri().'/img/ico/viber-ico.png"></a-->
-										<a class="ico-button pe-2" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM"><img src="'.get_template_directory_uri().'/img/ico/max.png"></a>										
+										<a class="ico-button pe-2" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM" target="_blank"><img src="'.get_template_directory_uri().'/img/ico/max.png"></a>										
 										
 										<!--a class="ico-button pe-2" href="https://www.instagram.com/stock_line_msk"><img src="'.get_template_directory_uri().'/img/ico/inst-ico.png"></a>
 										<a class="ico-button" href="https://vk.com/stock_line"><img src="'.get_template_directory_uri().'/img/ico/vk-ico.png"></a-->

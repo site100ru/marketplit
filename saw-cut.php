@@ -130,10 +130,10 @@
 								<p>Отправьте заполненный бланк заявки нам в любой удобной для Вас форме:</p>
 								<ul class="mb-0" style="padding-left: 0; list-style: none;">
 									<li class="mb-2">В мессенджер:
-										<a class="ico-button pe-1" href="whatsapp://send?phone=+79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
-										<a class="ico-button pe-1" href="tg://resolve?domain=NikolaevAA2023"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
+										<a class="ico-button pe-1" href="whatsapp://send?phone=+79299262301" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
+										<a class="ico-button pe-1" href="tg://resolve?domain=NikolaevAA2023" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
 										<!--a class="ico-button pe-1" href="viber://chat?number=79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/viber-ico.png"></a-->
-										<a class="ico-button pe-1" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/max.png"></a>
+										<a class="ico-button pe-1" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/max.png"></a>
 									</li>
 									<li class="mb-3">На email: <a href="mailto:1752800@mail.ru">1752800@mail.ru</a></li>
 									<li>В форме для отправки файла ниже.</li>

@@ -113,7 +113,7 @@
 
 
 						<li class="nav-item mb-3 me-3 text-dark">
-							<a class="text-dark" href="whatsapp://send?phone=+79299262301">
+							<a class="text-dark" href="whatsapp://send?phone=+79299262301" target="_blank">
 
 								<div class="float-left">
 									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-contacts-ico.png">
@@ -134,9 +134,9 @@
 							<div style="clear: both;"></div>
 						</li-->
 						<li class="nav-item mb-3 me-3 text-dark">
-							<a class="text-dark" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM">
+							<a class="text-dark" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM" target="_blank">
 								<div class="float-left">
-									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/max-ico.svg">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/max.png">
 								</div>
 								<div class="float-right">
 									<strong>Max:</strong> 8 (929) 926-23-01
@@ -146,7 +146,7 @@
 							<div style="clear: both;"></div>
 						</li>
 						<li class="nav-item mb-3 me-3 text-dark">
-							<a class="text-dark" href="tg://resolve?domain=NikolaevAA2023">
+							<a class="text-dark" href="tg://resolve?domain=NikolaevAA2023" target="_blank">
 
 								<div class="float-left">
 									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegran-contacts-ico.png">

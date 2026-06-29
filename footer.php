@@ -115,10 +115,10 @@
 										<a class="nav-link" href="#"> Обратный звонок </a>
 									</li>
 									<li class="nav-item d-xl-none mb-2">
-										<a class="ico-button pe-1" href="whatsapp://send?phone=+79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
-										<a class="ico-button pe-1" href="tg://resolve?domain=NikolaevAA2023"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
+										<a class="ico-button pe-1" href="whatsapp://send?phone=+79299262301" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
+										<a class="ico-button pe-1" href="tg://resolve?domain=NikolaevAA2023" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
 										<!--a class="ico-button pe-1" href="viber://chat?number=79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/viber-ico.png"></a-->
-										<a class="ico-button pe-1" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/max.png"></a>
+										<a class="ico-button pe-1" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/max.png"></a>
 										<!--a class="ico-button pe-1" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/inst-ico.png"></a>
 										<a class="ico-button" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/vk-ico.png"></a-->
 									</li>
@@ -133,14 +133,14 @@
 					<div class="col-md-8">
 						<ul class="nav justify-content-md-center mb-2 mb-lg-0">
 							<li class="nav-item">
-								<a class="nav-link ico-button px-0" href="whatsapp://send?phone=+79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
+								<a class="nav-link ico-button px-0" href="whatsapp://send?phone=+79299262301" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link ico-button pe-0" href="tg://resolve?domain=NikolaevAA2023"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
+								<a class="nav-link ico-button pe-0" href="tg://resolve?domain=NikolaevAA2023" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
 							</li>
 							<li class="nav-item">
 								<!--a class="nav-link ico-button pe-0" href="viber://chat?number=79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/viber-ico.png"></a-->
-								<a class="nav-link ico-button pe-0" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/max.png"></a>
+								<a class="nav-link ico-button pe-0" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/max.png"></a>
 							</li>
 
 							<!--li class="nav-item">

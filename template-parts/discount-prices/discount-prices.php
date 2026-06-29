@@ -29,11 +29,11 @@
 					<div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-4">
 						<ul class="nav mb-2 mb-lg-0">
 							<li class="nav-item">
-								<a class="nav-link ico-button px-0 py-0" href="tg://resolve?domain=NikolaevAA2023"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
+								<a class="nav-link ico-button px-0 py-0" href="tg://resolve?domain=NikolaevAA2023" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
 							</li>
 
 							<li class="nav-item">
-								<a class="nav-link ico-button pe-0 py-0" href="whatsapp://send?phone=+79299262301"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
+								<a class="nav-link ico-button pe-0 py-0" href="whatsapp://send?phone=+79299262301" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
 							</li>
 
 							<!--li class="nav-item">
@@ -41,7 +41,7 @@
                     src="<?php echo get_template_directory_uri(); ?>/img/ico/viber-ico.png"></a>
               </li-->
 							<li class="nav-item">
-								<a class="nav-link ico-button pe-0 py-0" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/max.png"></a>
+								<a class="nav-link ico-button pe-0 py-0" href="https://max.ru/u/f9LHodD0cOJwrqY4cZNGHTTYSG4w_OHtyKzlpKJHRTBMWuYxgczGEhbm-nM" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/max.png"></a>
 							</li>
 						</ul>
 
