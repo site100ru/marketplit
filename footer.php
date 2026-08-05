@@ -111,9 +111,9 @@
 									<li class="nav-item d-xl-none">
 										<a class="nav-link" href="tel:+79299262301">8 <span>(929)</span> 926-23-01</a>
 									</li>
-									<li class="nav-item d-xl-none">
+									<!--li class="nav-item d-xl-none">
 										<a class="nav-link" href="#"> Обратный звонок </a>
-									</li>
+									</li-->
 									<li class="nav-item d-xl-none mb-2">
 										<a class="ico-button pe-1" href="whatsapp://send?phone=+79299262301" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.png"></a>
 										<a class="ico-button pe-1" href="tg://resolve?domain=NikolaevAA2023" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.png"></a>
@@ -190,7 +190,8 @@
 		<!-- /Contacts -->
 
 
-		<!-- Callback Modal -->
+		<!-- Callback Modal (отключено) -->
+		<?php if ( false ) : ?>
 		<div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<form method="post" action="<?php echo get_template_directory_uri(); ?>/mails/callback-mail.php" class="modal-content">
@@ -219,6 +220,7 @@
 				</form>
 			</div>
 		</div>
+		<?php endif; ?>
 		<!-- /Callback Modal -->
 
 

@@ -28,12 +28,15 @@
 			$headers .= "Return-Path: info@marketplit.ru\r\n";
 			$headers .= "Content-type: text/html; charset=utf-8\r\n";
 
+			// Форма обратного звонка отключена — письма не отправляются.
 			// mail( "sidorov-vv3@mail.ru, vasilyev-r@mail.ru", "Заказ обратного звонка.", "
+			/*
 			mail( "1752800@mail.ru, vasilyev-r@mail.ru", "Заказ обратного звонка.", "
 				Клиент: " . $name ."<br>
 				Телефон: " . $tel,
 				$headers
 			);
+			*/
 			$_SESSION['win'] = 1;
 			$_SESSION['recaptcha'] = '<p class="text-light">Спасибо за обращение в «Маркет мебельной плиты». В&#160;ближайшее время с Вами свяжется наш специалист.</p>';
 			header("Location: ".$_SERVER['HTTP_REFERER']);

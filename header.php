@@ -107,7 +107,7 @@
 				</div>
 				<div class="col-2 text-end">
 					<a href="tel:+79299262301" class="header-phone"> 8 <span>(929)</span> 926-23-01</a>
-					<a class="header-callback" data-bs-toggle="modal" data-bs-target="#callbackModal" style="cursor: pointer;"> Обратный звонок </a>
+					<!--a class="header-callback" data-bs-toggle="modal" data-bs-target="#callbackModal" style="cursor: pointer;"> Обратный звонок </a-->
 				</div>
 			</div>
 		</div>

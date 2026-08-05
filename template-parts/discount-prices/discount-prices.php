@@ -50,7 +50,7 @@
 							<a href="tel:+79299262301" class="text-decoration-none text-dark">8 <span>(929)</span> 926-23-01 </a>
 						</div>
 
-						<button data-bs-toggle="modal" data-bs-target="#callbackModal" type="button" class="btn btn-lg btn-corporate-color-1 prices-section-responsive-btn">Перезвонить</button>
+						<!--button data-bs-toggle="modal" data-bs-target="#callbackModal" type="button" class="btn btn-lg btn-corporate-color-1 prices-section-responsive-btn">Перезвонить</button-->
 
 					</div>
 				</div>
